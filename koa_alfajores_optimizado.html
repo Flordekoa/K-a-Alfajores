@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Köa es un alfajor artesanal catamarqueño que une sabor e historia en cada bocado.">
+    <meta name="author" content="Köa Alfajores">
+    <title>Köa, un alfajor con historia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(252, 249, 249);
+            background-image: url('Catalogo Koa Alfajores 2025.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(6, 58, 6, 0.938);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header div {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            margin-top: 0.5rem;
+        }
+        nav a {
+            color: rgb(247, 245, 245);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 900;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #09310ae5;
+        }
+        main {
+            padding: 6rem 3rem 3rem;
+            background-color: rgba(7, 36, 5, 0.911);
+            margin-top: 100px;
+            border-radius: 12px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        footer {
+            background-color: rgba(4, 49, 4, 0.959);
+            padding: 2rem;
+            font-size: 1rem;
+            color: #eef1ee;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qr-section {
+            display: none;
+        }
+        .quiz {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .quiz p {
+            font-weight: bold;
+        }
+        .quiz button {
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #054f05;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .descuento {
+            font-weight: bold;
+            color: #FFD700;
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+        .volver-btn {
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #022702;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 2rem;
+            }
+            p, .quiz button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div><strong>Köa</strong>, un alfajor con historia</div>
+        <nav>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#alfajores">Nuestros Alfajores</a>
+            <a href="#juegos">Juegos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nosotros">
+            <h2>Nosotros</h2>
+            <p>Somos una familia catamarqueña apasionada por los sabores tradicionales y las historias que nos unen. Köa nació con la idea de que cada bocado también pueda ser un viaje en el tiempo. Por eso, cada alfajor que elaboramos a mano lleva una historia distinta de nuestra tierra.</p>
+        </section>
+
+        <section id="alfajores">
+            <h2>Nuestros Alfajores</h2>
+            <p>Elaborados artesanalmente con ingredientes locales, cada alfajor Köa es una invitación a viajar por la historia y cultura de Catamarca. Cada uno contiene un código QR exclusivo con una historia diferente para descubrir.</p>
+        </section>
+
+        <section id="juegos">
+            <h2>Juegos</h2>
+            <p>Descubre juegos interactivos relacionados con nuestra cultura e historia.</p>
+            <div class="quiz" id="quiz-section"></div>
+            <p id="resultado" style="font-weight: bold; margin-top: 1rem;"></p>
+            <div class="descuento" id="descuento-section" style="display: none;">
+                ¡Muestra este mensaje en el punto de venta y obtén un 20% de descuento en tu próxima compra de alfajor Köa! 🎉
+            </div>
+            <button class="volver-btn" onclick="volverInicio()">Volver al inicio</button>
+        </section>
+
+        <section id="qr1" class="qr-section">
+            <h2>Historia del Alfajor 1</h2>
+            <p>Inspirado en la leyenda del algarrobo eterno de Andalgalá.</p>
+        </section>
+        
+        <section id="qr2" class="qr-section">
+            <h2>Historia del Alfajor 2</h2>
+            <p>Relato ancestral sobre los tejidos y el poncho rojo de Belén.</p>
+        </section>
+        
+        <section id="qr3" class="qr-section">
+            <h2>Historia del Alfajor 3</h2>
+            <p>Cuentos de los antiguos pueblos diaguitas y su conexión con la tierra.</p>
+        </section>
+        
+        <section id="qr4" class="qr-section">
+            <h2>Historia del Alfajor 4</h2>
+            <p>Crónicas sobre el viento Zonda y su poder en la cultura catamarqueña.</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Köa, un alfajor con historia. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const hash = window.location.hash;
+            const qrSections = ["#qr1", "#qr2", "#qr3", "#qr4"];
+            qrSections.forEach(id => {
+                if (hash === id) {
+                    document.querySelector(id).style.display = "block";
+                }
+            });
+            iniciarJuego();
+        }
+
+        function volverInicio() {
+            window.location.href = window.location.pathname;
+        }
+
+        const preguntas = [
+            { texto: 'Catamarca significa "tierra de ponchos" en quechua.', respuesta: false },
+            { texto: 'Los diaguitas habitaron gran parte del actual territorio catamarqueño.', respuesta: true },
+            { texto: 'La Fiesta del Poncho se celebra en diciembre.', respuesta: false },
+            { texto: 'El Sapasucum es el espíritu del algarrobo.', respuesta: true },
+            { texto: 'El poncho rojo es un símbolo cultural catamarqueño.', respuesta: true },
+            { texto: 'El cóndor no habita en la región andina de Catamarca.', respuesta: false },
+            { texto: 'Catamarca limita con Bolivia.', respuesta: false },
+            { texto: 'La capital de Catamarca se llama San Fernando del Valle de Catamarca.', respuesta: true },
+            { texto: 'El silbido del viento es una leyenda local.', respuesta: true }
+        ];
+
+        let indice = 0;
+        let correctas = 0;
+
+        function iniciarJuego() {
+            mostrarPregunta();
+        }
+
+        function mostrarPregunta() {
+            if (indice < preguntas.length) {
+                const quiz = document.getElementById("quiz-section");
+                quiz.innerHTML = `
+                    <p>${preguntas[indice].texto}</p>
+                    <button onclick="responder(true)">Verdadero</button>
+                    <button onclick="responder(false)">Falso</button>
+                `;
+            } else {
+                const mensaje = correctas >= 7 
+                    ? '¡Felicitaciones! Has ganado un 20% de descuento en tu próxima compra de alfajor Köa. 🎉'
+                    : 'Has respondido todas las preguntas. ¡Sigue aprendiendo con Köa!';
+                document.getElementById("quiz-section").innerHTML = "";
+                document.getElementById("resultado").innerText = mensaje;
+                if (correctas >= 7) {
+                    document.getElementById("descuento-section").style.display = "block";
+                }
+            }
+        }
+
+        function responder(respuestaUsuario) {
+            if (respuestaUsuario === preguntas[indice].respuesta) {
+                correctas++;
+            }
+            indice++;
+            mostrarPregunta();
+        }
+    </script>
+</body>
+</html>
